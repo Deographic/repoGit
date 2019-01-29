@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Slayer</title>
+	<link rel="stylesheet" href="css/vue-game.css">
+	
+</head>
+
+<body  >
+<div id="app">
+			
+	<div class="container">
+		<h1>{{saludo}}</h1>
+	</div>
+	
+	<div id="players">
+		<div id="player">
+			<h2> You</h2>
+			<div class="playerDamage"><div class="progress" :style="plCounter">{{ plLife }} %</div></div>
+		</div>	
+		<div id="monster">
+			<h2>Monster</h2>
+			<div class="monsterDamage"><div class="progress" :style="MonsCounter">{{ monsterLife}} % </div></div>
+		</div>	
+	</div>
+	<div id="controls">
+		<div v-if="start" class="container1">
+			<button @click="start = !start" > START GAME</button>
+		</div>
+		<div v-else class="container2">
+			<button @click="attack()">ATTTACK</button>
+			<button @click="spAttack()">SPECIAL ATTACK</button>
+			<button @click=" healPl()">HEAL</button>
+			<button @click="start=!start, startGame()">QUIT</button>
+		</div>
+	</div>
+	<div id="log" v-if= "actions.length > 0">
+		<ul>
+			
+			<li  class="format-log" v-for="action in actions">{{ action}}</li>
+		</ul>
+	</div>
+</div>
+	
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="js/vue-game.js"></script>
+
+	
+</html>

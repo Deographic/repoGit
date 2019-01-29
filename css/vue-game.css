@@ -1,0 +1,10 @@
+#players{width: 100%;text-align: center;}
+h1{ text-align: center; }
+#player, #monster {width:50%; float: left;}
+.playerDamage, .monsterDamage{background-color:#bbb; width:200px; height: 20px; margin: 0 auto;}
+.progress{background-color:green; height: 20px; color:white;}
+.format-log{ text-transform: uppercase; font-size: 12px; text-align: center; list-style: none; }
+#controls{width:100%;  margin: 20px 0; float: left;  text-align: center; }
+
+
+	
